@@ -11,7 +11,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-data = pd.read_csv('./data/clean_data.csv')
+data = pd.read_csv('../data/clean_data.csv')
 
 data.head()
 
@@ -22,7 +22,8 @@ target_dict = {classes[i]:i for i in range(len(classes))}
 #change target from strings to ints.
 
 data['genre'] = data['genre'].replace(target_dict)
-X = data.drop(columns=['id','genre'])
+X = data.drop(columns=['id','genre', 'song_name'])
+
 y = np.array(data['genre'])
 
 X_train, X_test, y_train, y_test = train_test_split(X,y, random_state=42)
@@ -41,7 +42,7 @@ y_test_t = torch.tensor(y_test).long()
 class MultiClassModel(nn.Module):
     def __init__(self):
         super().__init__()
-        self.h1 = nn.Linear(25, 32)
+        self.h1 = nn.Linear(27, 32)
         self.h2 = nn.Linear(32, 64)
         self.h3 = nn.Linear(64, 64)
         self.h4 = nn.Linear(64, 128)
@@ -72,7 +73,7 @@ train_accuracy = []
 test_accuracy = []
 batch_size = 512
 training_size = X.shape[0]
-for epoch in range(150):
+for epoch in range(100):
     with torch.no_grad():
         test_pred = model(X_test_t)
         test_loss = loss_fn(test_pred,y_test_t)
