@@ -3,7 +3,10 @@
 ## Summary
 
 For my capstone project I chose to tackle the problem of assigning genres to songs based on the attributes of the song. 
-The data for this project was provided by Kaggle (https://www.kaggle.com/mrmorj/dataset-of-songs-in-spotify). 
+The data for this project was provided by Kaggle (https://www.kaggle.com/mrmorj/dataset-of-songs-in-spotify).  In this 
+scenario, Spotify is looking at publishing music similarly to how SoundCloud allows users to post content. In preparation
+of users adding music to the platform Spotify is requesting a method to catagorize these new songs into their respective
+genres. 
 
 ## Table of contents
 
