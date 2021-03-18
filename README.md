@@ -21,7 +21,6 @@ was able to exceed baseline accuracy by tenfold. This repository contains all ma
 |data|folder|This folder contains the original data from kaggle and the cleaned data for modeling|
 |imgs|folder|This folder contains the images and plots used for this project.| 
 |docs|folder|This folder contains documents relating to the project.|
-|
 
 
 # Data
@@ -56,3 +55,20 @@ in the real world do not get the perfect training data, this projects offers to 
 
 
 # Conclusions and Recommendations
+* I created a neural network model to predict the genre of a song given attribute data about the song.  
+  
+
+* This model is over ten fold better than the baseline model.
+
+  
+* Utilizing Dropout Regularization did not improve the model due to the data deficiency. 
+
+# References 
+* https://www.kaggle.com/mrmorj/dataset-of-songs-in-spotify
+
+
+
+* https://pytorch.org/docs/stable/torch.html#parallelism
+
+
+* https://en.wikipedia.org/wiki/Spotify
