@@ -70,9 +70,14 @@ in the real world do not get the perfect training data, this projects offers to 
 # References 
 * https://www.kaggle.com/mrmorj/dataset-of-songs-in-spotify
 
-
-
 * https://pytorch.org/docs/stable/torch.html#parallelism
 
-
 * https://en.wikipedia.org/wiki/Spotify
+
+* https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html
+
+* https://seaborn.pydata.org/generated/seaborn.displot.html
+
+* https://deeplearningcourses.com/c/data-science-deep-learning-in-theano-tensorflow
+
+* https://www.youtube.com/watch?v=lv4TlejWrYc&ab_channel=LazyProgrammer
