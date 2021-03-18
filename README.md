@@ -6,9 +6,9 @@
 
 For my capstone project I chose to tackle the problem of assigning genres to songs based on the attributes of the song. 
 In this scenario, Spotify is looking at publishing music similarly to how SoundCloud allows users to post content. 
-In preparation of users adding music to the platform Spotify is requesting a method to categorize these new songs into 
-their respective genres. I have chosen to build a MultiClass Classification Model utilizing PyTorch to create a Neural 
-Network. The data from kaggle is restricted in the unbalanced nature of the target value, genre. Given this deficit, I 
+In preparation of users adding music to the platform, **Spotify is requesting a method to categorize these new songs into 
+their respective genres.** I have chosen to build a MultiClass Classification Model utilizing PyTorch to create a Neural 
+Network. The data from kaggle is restricted by being unbalanced in regards to the target value, genre. Given this deficit, I 
 was able to exceed baseline accuracy by tenfold. This repository contains all materials related to this project. 
 
 
@@ -55,13 +55,17 @@ in the real world do not get the perfect training data, this projects offers to 
 
 
 # Conclusions and Recommendations
-* I created a neural network model to predict the genre of a song given attribute data about the song.  
-  
 
-* This model is over ten fold better than the baseline model.
+* I created a neural network model to predict the genre of a song given attribute data about the song.
 
-  
-* Utilizing Dropout Regularization did not improve the model due to the data deficiency. 
+
+* This model without regularization is over ten fold better than the baseline model.
+
+
+* Utilizing Dropout Regularization did not improve the model in terms of accuracy, due to the data deficiency. It did improve the model by making the model less over fit and far less erratic. However, regardless of the model set up, I have never been able to achieve an accuracy score above 70%
+
+
+ 
 
 # References 
 * https://www.kaggle.com/mrmorj/dataset-of-songs-in-spotify
