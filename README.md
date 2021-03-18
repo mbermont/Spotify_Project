@@ -40,7 +40,7 @@ in the real world do not get the perfect training data, this projects offers to 
 |speechiness|float|These are numeric percentages that describe the speechiness quality of the song.||
 |acousticness|float|These are numeric percentages that describe the acouticness of the song.||
 |instrumentalness|float64|These are numeric percentages that describe the instrumental percentage of the song.||
-|liveness|float|Base cost of item in row. (will use other column)||
+|liveness|float|The percent of song that is live.||
 |valence|float|This is a percentage value that describes how happy a song sounds.||
 |tempo|float|The beats per minute of the song.||
 |id|object|These are string ids for the songs in the dataset. These values should be dropped as there are too many unique values that will make the model over fit.||
@@ -49,7 +49,7 @@ in the real world do not get the perfect training data, this projects offers to 
 |analysis_url|object|This column contains similar data as in the track_href column. This column should be dropped as well to prevent creating too many features when dummying the columns.||
 |duration_ms|int64| These are the song durations in milliseconds. These are numeric values.||
 |time_signature|int64|This is a class like integer that shows the time signature of the song.||
-|genre  |object|Actual price of item at time of sale (This changes when items are marked on sale.)||
+|genre  |object|This is the genre of the song, there are 15 unique values for genre. This will be the target of the model.||
 |song_name|object|Name of the song.||
 
 
