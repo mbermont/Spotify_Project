@@ -1,22 +1,35 @@
-# Spotify_Project
+# Spotify Project
+
+
 
 ## Summary
 
 For my capstone project I chose to tackle the problem of assigning genres to songs based on the attributes of the song. 
-The data for this project was provided by Kaggle (https://www.kaggle.com/mrmorj/dataset-of-songs-in-spotify).  In this 
-scenario, Spotify is looking at publishing music similarly to how SoundCloud allows users to post content. In preparation
-of users adding music to the platform Spotify is requesting a method to catagorize these new songs into their respective
-genres. 
+In this scenario, Spotify is looking at publishing music similarly to how SoundCloud allows users to post content. 
+In preparation of users adding music to the platform Spotify is requesting a method to categorize these new songs into 
+their respective genres. I have chosen to build a MultiClass Classification Model utilizing PyTorch to create a Neural 
+Network. The data from kaggle is restricted in the unbalanced nature of the target value, genre. Given this deficit, I 
+was able to exceed baseline accuracy by tenfold. This repository contains all materials related to this project. 
+
 
 ## Table of contents
 
 |File Name|Type|Description|
 |---|---|---|
-|Data_EDA.ipynb|Jupiter Notebook|This notebook contains the Data cleaning and EDA perfomed on the spotify data.||
-|modeling.ipynb|Jupiter Notebook|This notebook contains the Modeling process to find a songs genre based on data about the song.|
-|data|folder||
+|code/Data_EDA.ipynb|Jupiter Notebook|This notebook contains the Data cleaning and EDA perfomed on the spotify data.||
+|code/modeling.ipynb|Jupiter Notebook|This notebook contains the Modeling process to find a songs genre based on data about the song.|
+|data|folder|This folder contains the original data from kaggle and the cleaned data for modeling|
+|imgs|folder|This folder contains the images and plots used for this project.| 
+|docs|folder|This folder contains documents relating to the project.|
+|
 
-# Data Dictionary 
+
+# Data
+The data for this project came from a Kaggle competition (https://www.kaggle.com/mrmorj/dataset-of-songs-in-spotify).
+The data had one limitation which was the uneven distribution of target values for the model. However, since most models
+in the real world do not get the perfect training data, this projects offers to be an excersize working with real life data. 
+
+## Data Dictionary 
                 
 |Column|Type|Description|
 |---|---|---|
@@ -30,7 +43,7 @@ genres.
 |instrumentalness|float64|These are numeric percentages that describe the instrumental percentage of the song.||
 |liveness|float|Base cost of item in row. (will use other column)||
 |valence|float|This is a percentage value that describes how happy a song sounds.||
-|tempo|float|individual record id for each item||
+|tempo|float|The beats per minute of the song.||
 |id|object|These are string ids for the songs in the dataset. These values should be dropped as there are too many unique values that will make the model over fit.||
 |uri|object|This column contains similar data as in the id column. This coulmn should be dropped as well to prevent creating too many features when dummying the columns.||
 |track_href|object|track_href is the url for the specific track. This column will not make give good data fro the model and will be dropped.||
@@ -39,3 +52,7 @@ genres.
 |time_signature|int64|This is a class like integer that shows the time signature of the song.||
 |genre  |object|Actual price of item at time of sale (This changes when items are marked on sale.)||
 |song_name|object|Name of the song.||
+
+
+
+# Conclusions and Recommendations
